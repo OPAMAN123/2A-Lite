@@ -20,6 +20,14 @@ Indoor testing under heavy RF interference (≈9–10 Wi-Fi APs detected; phone 
 - `figures/rtt_vs_distance.png` — Average RTT vs Distance  
 - `figures/success_vs_distance.png` — Success Rate vs Distance
 
+
+**Environment Notes:**  
+- Wi-Fi APs: ~20–26 nearby  
+- Mobile hotspot active  
+- Indoor with walls/obstacles  
+- Receiver powered by laptop/charger
+
+
 ## Interpretation
 Experimental results show near-perfect reliability (≈99%) and low RTT (~15 ms) at 1 m under heavy interference. At 5 m, success rate drops to ~66% and RTT increases modestly. Extrapolation suggests rapid degradation beyond 10 m in dense RF environments, implying practical systems would require relays or mesh for larger coverage.
 
