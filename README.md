@@ -29,5 +29,14 @@
 - Results are for indoor, high-interference conditions (many Wi-Fi APs & hotspots).
 - Future work: multi-hop relaying, mesh using ESP-NOW, power consumption profiling, button/LED UI, and encryption for authentication.
 
+
+## Run the Project
+
+1. Open `firmware/receiver/receiver.ino` and flash to ESP32
+2. Power receiver (power bank or laptop)
+3. Open `firmware/sender/sender.ino`, set MACs, and flash
+4. Open Serial Monitor at 115200 to view results
+
+
 ## License
 This project is published under the MIT License. See `LICENSE`.
