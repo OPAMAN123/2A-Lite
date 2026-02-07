@@ -59,7 +59,7 @@ void onReceive(const esp_now_recv_info_t *info,
   uint32_t rtt = millis() - sendTimes[ack.msg_id];
   ackCount++;
 
-  Serial.print("ACK ");
+  // CSV output format: msg_id, rtt_ms, sentCount
   Serial.print(ack.msg_id);
   Serial.print(" | RTT(ms): ");
   Serial.println(rtt);
@@ -69,9 +69,11 @@ void onReceive(const esp_now_recv_info_t *info,
 
 void setup() {
   Serial.begin(115200);
+  // Set Wi-Fi to Station mode (required for ESP-NOW operation)
   WiFi.mode(WIFI_STA);
   delay(1000);
-
+  
+// Initialize ESP-NOW (MAC-layer peer-to-peer communication)
   if (esp_now_init() != ESP_OK) {
     Serial.println("ESP-NOW init failed");
     return;
@@ -80,6 +82,7 @@ void setup() {
   esp_now_register_send_cb(onSend);
   esp_now_register_recv_cb(onReceive);
 
+  // Register receiver as ESP-NOW peer using its MAC address
   esp_now_peer_info_t peer = {};
   memcpy(peer.peer_addr, receiverMAC, 6);
   peer.channel = 0;
