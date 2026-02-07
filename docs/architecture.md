@@ -1,4 +1,10 @@
 # Architecture — 2A-Lite
+        +------------------+     ESP-NOW      +------------------+
+        |  Sender ESP32    | <---------------> | Receiver ESP32   |
+        | (USB power / PC) |                   | (power bank / PC)|
+        +------------------+                   +------------------+
+                 |                                      |
+           Serial Monitor                         ACK response
 
 ## Goals
 - Provide a small offline emergency messaging link between two ESP32 nodes without internet or cellular networks.
