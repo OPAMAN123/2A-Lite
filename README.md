@@ -1,7 +1,8 @@
 # 2A-Lite — Offline Emergency P2P Communication (ESP-NOW)
 
-**Short description:**  
-2A-Lite is a minimal, low-cost offline emergency communication prototype using ESP32 (ESP-NOW). It supports one-way emergency messages with acknowledgements, measures round-trip latency (RTT) and packet success rate vs distance, and is intended as a reproducible undergraduate research project.
+![GitHub repo size](https://img.shields.io/github/repo-size/OPAMAN123/2A-Lite)
+![GitHub last commit](https://img.shields.io/github/last-commit/OPAMAN123/2A-Lite)
+
 
 ## Repository layout
 - `firmware/` — Arduino sketches for sender and receiver.
