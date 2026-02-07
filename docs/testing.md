@@ -1,4 +1,14 @@
-typedef struct {
-  uint8_t msg_id;
-  uint32_t ack_timestamp_ms;
-} ack_packet_t;
+Example CSV log output (sender):
+
+0,15,1 
+
+1,14,2
+
+2,16,3
+
+3,13,4
+
+4,18,5
+
+Format:
+msg_id, round_trip_latency_ms, packets_sent
