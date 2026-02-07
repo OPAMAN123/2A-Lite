@@ -1,0 +1,16 @@
+## Setup & Run
+
+### Requirements
+- Arduino IDE + ESP32 board support
+- Two ESP32 DevKit boards
+- USB cable and power source
+
+### Steps
+1. Open `firmware/receiver/receiver.ino`
+2. Set `senderMAC` to the sender MAC from Serial Monitor
+3. Flash to first ESP32
+4. Power receiver with a power bank / charger
+5. Open `firmware/sender/sender.ino`
+6. Set `receiverMAC` to the receiver MAC
+7. Flash to second ESP32
+8. Open Serial Monitor on sender at 115200
